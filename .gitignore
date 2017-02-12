@@ -6,6 +6,7 @@
 *.lrs
 *.res
 *.compiled
+*.obj
 *.dbg
 *.ppu
 *.o
