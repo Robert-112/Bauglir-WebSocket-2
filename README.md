@@ -1,7 +1,9 @@
+# bauglir-websocket 2
+
 Funktionsfähige Kopie der WebSocket-Bibliothek von Bauglir
 (Original: https://code.google.com/archive/p/bauglir-websocket/)
 
-Der Quelltext der Beispiele wurde leicht angepasst, damit es unter Lazarus (1.6.2) inkl. FPC (3.0.0) funktioniert.
+Der Quelltext der Beispiele (Server, Client) wurde leicht angepasst, damit alles unter Lazarus (1.6.2) inkl. FPC (3.0.0) funktioniert.
 
 +++
 
