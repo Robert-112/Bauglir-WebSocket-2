@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <MainUnit Value="0"/>
+      <UseXPManifest Value="True"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="2"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="35"/>
+      <StringTable FileDescription="Bauglir WebSocket client demo" LegalCopyright="Copyright 2011; Bronislav Klucka" ProductVersion="2.0.1.0"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="ClientDemo.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="3" Y="13"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainformu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="MainFormU"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="142"/>
+        <CursorPos Y="144"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../../../../usr/share/fpcsrc/2.4.0/packages/libpng/src/png.pp"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="444"/>
+        <CursorPos Y="480"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../../../../usr/lib/lazarus/0.9.28.2/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1461"/>
+        <CursorPos X="17" Y="1461"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../../mine/pascal/Bauglir/internet/websocket2.pas"/>
+        <UnitName Value="WebSocket2"/>
+        <TopLine Value="1042"/>
+        <CursorPos Y="1070"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../../mine/pascal/Bauglir/internet/customserver2.pas"/>
+        <UnitName Value="CustomServer2"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="758"/>
+        <CursorPos X="84" Y="773"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../../synapse/source/lib/ssl_openssl.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="78"/>
+        <CursorPos X="10" Y="93"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="../../../synapse/source/lib/ssl_openssl_lib.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="84"/>
+        <CursorPos X="44" Y="100"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="45" Column="49" TopLine="23"/>
+      </Position1>
+      <Position2>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="284" Column="87" TopLine="282"/>
+      </Position2>
+      <Position3>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="159" Column="14" TopLine="137"/>
+      </Position3>
+      <Position4>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="159" Column="13" TopLine="137"/>
+      </Position4>
+      <Position5>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="159" Column="12" TopLine="137"/>
+      </Position5>
+      <Position6>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="159" Column="13" TopLine="137"/>
+      </Position6>
+      <Position7>
+        <Filename Value="ClientDemo.lpr"/>
+        <Caret Line="3" Column="14"/>
+      </Position7>
+      <Position8>
+        <Filename Value="mainformu.pas"/>
+        <Caret Line="263" Column="53" TopLine="171"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../Pascal Library inkl. Synapse/bauglir library 2.0.4;../Pascal Library inkl. Synapse/synapse 203"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+        <CStyleOperator Value="False"/>
+        <AllowLabel Value="False"/>
+        <CPPInline Value="False"/>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Debugging>
+        <GenerateDebugInfo Value="False"/>
+        <UseLineInfoUnit Value="False"/>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainformu.pas"/>
+        <Line Value="144"/>
+      </Item1>
+    </BreakPoints>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
