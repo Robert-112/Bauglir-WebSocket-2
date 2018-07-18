@@ -1,5 +1,7 @@
 # bauglir-websocket 2
 
+(Fork of Robert-112's repo, might separate code bases if there's no response to my PRs or issue reports.)
+
 Funktionsfähige Kopie der WebSocket-Bibliothek von Bauglir
 (Original: https://code.google.com/archive/p/bauglir-websocket/)
 
