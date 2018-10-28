@@ -5,6 +5,10 @@ Funktionsfähige Kopie der WebSocket-Bibliothek von Bauglir
 
 Der Quelltext der Beispiele (Server, Client) wurde leicht angepasst, damit alles unter Lazarus (1.6.2) inkl. FPC (3.0.0) funktioniert.
 
+# Working Version
+See the Fork made by MFernstorm:
+https://github.com/MFernstrom/Bauglir-WebSocket-2
+
 +++
 
 WebSocket server/client implementation in Pascal and C#
