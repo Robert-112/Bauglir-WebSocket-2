@@ -63,7 +63,7 @@ uses
   cthreads,
   {$ENDIF}
   Classes, SysUtils, blcksock, syncobjs,
-  CustomServer2;
+  CustomServer2, strutils, character;
 
 const
   {:Constants section defining what kind of data are sent from one pont to another}
@@ -144,9 +144,9 @@ type
     fOnReadFull: TWebSocketConnectionDataFull;
     fOnWrite: TWebSocketConnectionData;
     fOnClose: TWebSocketConnectionClose;
-    fOnOpen: TWebSocketConnectionEvent;
-    //fOnPing: TWebSocketConnectionPingPongEvent;
-    //fOnPong: TWebSocketConnectionPingPongEvent;
+    fOnOpen: TWebSocketConnectionEvent;
+    //fOnPing: TWebSocketConnectionPingPongEvent;
+    //fOnPong: TWebSocketConnectionPingPongEvent;
 
     fCookie: string;
     fVersion: integer;
@@ -741,8 +741,8 @@ end;
 function TWebSocketServer.CreateServerConnection(aSocket: TTCPCustomConnectionSocket): TCustomConnection;
 var headers, hrs: TStringList;
     get: string;
-    s{, resName, host, port}, key, version{, origin, protocol, extensions, cookie}: string;
-    iversion, vv: integer;
+    s{, resName, host, port}, key, version{, origin, protocol, extensions, cookie}, tmpExtension, tmpWord, extensionKey, extensionValue: string;
+    iversion, vv, extCounter: integer;
     res: boolean;
     r : TWebSocketServerConnections;
 begin
@@ -829,7 +829,7 @@ begin
 
 
         fncProtocol := '-';
-        fncExtensions := '-';
+        tmpExtension := '-';
         fncCookie := '-';
         fncOrigin := '-';
 
@@ -846,7 +846,7 @@ begin
         if (headers.IndexOfName('sec-websocket-protocol') > -1) then
           fncProtocol := trim(headers.Values['sec-websocket-protocol']);
         if (headers.IndexOfName('sec-websocket-extensions') > -1) then
-          fncExtensions := trim(headers.Values['sec-websocket-extensions']);
+          tmpExtension := trim(headers.Values['sec-websocket-extensions']);
         if (headers.IndexOfName('cookie') > -1) then
           fncCookie := trim(headers.Values['cookie']);
 
@@ -865,6 +865,30 @@ begin
         ODS('Extensions: %s', [fncExtensions]);
         ODS('Cookie: %s', [fncCookie]);
         {}
+
+        // Account for client_max_window_bits, probably add more later on
+        for extCounter := 1 to WordCount(tmpExtension, [';']) do begin
+            tmpWord := ExtractWord(extCounter, tmpExtension, [' ', ';']);
+
+            extensionKey := ExtractWord(1, tmpWord, ['=']);
+            extensionValue := ExtractWord(2, tmpWord, ['=']);
+
+            if Not IsWordPresent(extensionKey, fncExtensions, [' ', ';', '=']) then begin
+              fncExtensions := fncExtensions + extensionKey;
+
+              if (extensionKey = 'client_max_window_bits') and (length(extensionValue) = 0) then
+                fncExtensions := fncExtensions + '=15;'
+              else begin
+                if length(extensionValue) > 0 then
+                  fncExtensions := fncExtensions + '=' + extensionValue + ';'
+                else
+                  fncExtensions := fncExtensions + ';'
+              end;
+            end;
+        end;
+
+        if fncExtensions[length(fncExtensions)] = ';' then
+          Delete(fncExtensions, Length(fncExtensions), 1);
 
         res := true;
       finally
